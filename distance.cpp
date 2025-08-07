@@ -1,11 +1,12 @@
 #include <iostream>
 #include "point.h"
 #include <cmath>
+#include <cstdlib>  
 
 double distance(const Point& p1, const Point& p2) {
-    int dx = p2.x - p1.x;
-    int dy = p2.y - p1.y;
-    return std::sqrt(dx * dx + dy * dy);
+    int dx = std::abs(p2.x - p1.x);
+    int dy = std::abs(p2.y - p1.y);
+    return dx + dy;
 }
 
 int main() {
